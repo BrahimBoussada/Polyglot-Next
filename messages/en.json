@@ -1,6 +1,80 @@
 {
   "Hero": {
-    "title": "Make power with us!",
-    "paragraph": "Wand is a tool designed to help everyone bring their ideas to life-and in the process, make us all a bit more divine. We feel that in order to truly represent and explore our ideas accurately with Al, we need tools that give us greater personalization and hands- on, visual control over the generative models we use. We're building a collaborative, native tool with these principles in mind-so that we can help artists and design teams explore and spark new ideas. We're an NYC based team of creatives and engineers passionate about artistic expression and generative Al. We recently raised a seed round led by OSV (partnering with Jim O'Shaughnessy, the executive chairman of Stability.ai) along with a number of other great firms, and we're looking to expand the team!"
+    "title": "Grow like nature does!",
+    "paragraph": "Loam is more than just a tool. It’s an environment for creative growth. Inspired by the quiet intelligence of nature, it invites artists, designers, and teams to build ideas the way ecosystems grow, slowly, thoughtfully, with space for change. We believe creativity flourishes when given time, clarity, and the right conditions. That’s why Loam offers a focused, flexible interface where imagination and precision coexist. Whether you're shaping early concepts or refining complex visions, Loam helps you listen, respond, and evolve just like the natural world. We’re building for those who care deeply about their process, find inspiration in the seasons of making, and understand that lasting work is rarely rushed."
+  },
+
+  "Navigation": {
+    "roles": {
+      "title": "Roles",
+      "href": "#roles"
+    },
+    "contact": {
+      "title": "Contact",
+      "href": "#contact"
+    },
+    "download": {
+      "title": "Download",
+      "href": "#download"
+    }
+  },
+
+  "Table": {
+    "title": "We’re Hiring!",
+
+    "salesRepresentative": {
+      "title": "Sales Representative",
+      "location": "Remote"
+    },
+    "metalGraphicsEngineer": {
+      "title": "Metal Graphics Engineer",
+      "location": "NYC"
+    },
+    "socialMediaManager": {
+      "title": "Social Media Manager",
+      "location": "Remote"
+    },
+    "aiArtist": {
+      "title": "AI Artist / Hacker",
+      "location": "Remote"
+    },
+    "machineLearningEngineer": {
+      "title": "NLP Engineer",
+      "location": "New York"
+    }
+  },
+
+  "Social": {
+    "ig": {
+      "link": "Sales Representative"
+    },
+    "github": {
+      "link": "Sales Representative"
+    },
+    "tiktok": {
+      "link": "Sales Representative"
+    },
+    "bluesky": {
+      "link": "Sales Representative"
+    },
+    "machineLearningEngineer": {
+      "title": "Machine Learning Engineer",
+      "location": "New York"
+    }
+  },
+
+  "Contact": {
+    "title": "Don’t see your role?",
+    "paragraph": "We’re always looking for amazing people who believe in our mission. If you’re excited about what we’re building, send us an email and tell us how you’d like to contribute.",
+    "email": "info@loam.tech"
+  },
+
+  "Download": {
+    "title": "Bloom Forward",
+    "ctl": "Download Loam"
+  },
+
+  "Footer": {
+    "copyright": "All rights reserved."
   }
 }
