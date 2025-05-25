@@ -7,15 +7,15 @@
   "Navigation": {
     "roles": {
       "title": "Roles",
-      "href": "#roles"
+      "href": "about"
     },
     "contact": {
       "title": "Contact",
-      "href": "#contact"
+      "href": "about"
     },
     "download": {
       "title": "Download",
-      "href": "#download"
+      "href": "about"
     }
   },
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
@@ -7,13 +9,8 @@ import { SiX } from "@icons-pack/react-simple-icons";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 
 import Image from "next/image";
-
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
+import { clsx } from "clsx";
+import { useState } from "react";
 
 export default function Home() {
   const locale = useLocale();
@@ -29,31 +26,23 @@ export default function Home() {
   const navigation = ["roles", "contact", "download"];
 
   const social = [
-    { name: "X", href: "#", icon: SiX },
-    { name: "Instagram", href: "#", icon: SiInstagram },
-    { name: "TikTok", href: "#", icon: SiTiktok },
-    { name: "GitHub", href: "#", icon: SiGithub },
+    { name: "X", icon: SiX },
+    { name: "Instagram", icon: SiInstagram },
+    { name: "TikTok", icon: SiTiktok },
+    { name: "GitHub", icon: SiGithub },
   ];
+
+  const [pressed, setPressed] = useState(false);
+
+  const handleClick = () => {
+    setPressed(true);
+    setTimeout(() => {
+      setPressed(false);
+    }, 300); // 0.3 second
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <header className="fixed top-4 inset-x-4 mx-auto xl:w-7xl flex items-center justify-between py-4 px-8 rounded-xl border bg-white shadow-xs">
-        <Link href="#" className="font-bold text-2xl">
-          Loam
-        </Link>
-        <nav className="flex gap-6" aria-label="Primary navigation">
-          {navigation.map((item) => (
-            <Link
-              key={item}
-              href={"#" + item}
-              className="transition-all duration-300 hover:text-muted-foreground"
-            >
-              {t(`Navigation.${item}.title`)}
-            </Link>
-          ))}
-        </nav>
-      </header>
-
       {/* MAIN */}
       <main className="flex flex-col items-center gap-36 text-center max-w-2xl  mx-auto my-36">
         <section>
@@ -106,12 +95,15 @@ export default function Home() {
 
           {/* Centered Text and Button */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               {t("Download.title")}
             </h1>
             <Button
               size={"lg"}
-              className="bg-blue-600 shadow-xl  hover:bg-blue-500  text-white text-base  py-2 px-4 rounded cursor-pointer"
+              onClick={handleClick}
+              className={`px-4 py-2 rounded border transition duration-300 text-primary 
+                ${pressed ? "bg-accent/80 scale-95" : "bg-accent"}
+                hover:bg-accent/70 active:scale-95`}
             >
               {t("Download.ctl")}
             </Button>
@@ -128,8 +120,7 @@ export default function Home() {
                 <Link
                   key={item.name}
                   className=" hover:text-muted-foreground transition-all duration-300"
-                  href={item.href}
-                  target="_blank"
+                  href={""}
                 >
                   <item.icon size={16} />
                 </Link>
