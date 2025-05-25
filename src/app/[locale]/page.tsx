@@ -130,7 +130,7 @@ export default function Home() {
         </div>
 
         <div className="text-center text-xs py-4">
-          ©{" "}
+          ©{" sss"}
           {new Date()
             .getFullYear()
             .toLocaleString(locale === "ar" ? "ar-LB" : "en", {
